@@ -41,7 +41,25 @@
         </div>
     </div>
     <div class="products__pagination">
-        {{ $products->links() }}
+        @if ($products->onFirstPage())
+            <span class="pagination__arrow">&lt;</span>
+        @else
+            <a class="pagination__arrow" href="{{ $products->previousPageUrl() }}">&lt;</a>
+        @endif
+
+        @for ($i = 1; $i <= $products->lastPage(); $i++)
+            @if ($i == $products->currentPage())
+                <span class="pagination__number pagination__number--current">{{ $i }}</span>
+            @else
+                <a class="pagination__number" href="{{ $products->url($i) }}">{{ $i }}</a>
+            @endif
+        @endfor
+
+        @if ($products->hasMorePages())
+            <a class="pagination__arrow" href="{{ $products->nextPageUrl() }}">&gt;</a>
+        @else
+            <span class="pagination__arrow">&gt;</span>
+        @endif
     </div>
 </div>
 @endsection

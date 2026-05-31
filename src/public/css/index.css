@@ -47,7 +47,7 @@
     padding: 14px 12px;
     background: #fff;
     border: 1px solid #e0dfde;
-    color: #e5e5e6;
+    color: #b4b5b7;
 }
 
 .search__input {
@@ -102,15 +102,44 @@
 .product-card__body {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 10px;
     padding: 20px;
 }
 
-.product-card__name,
+.product-card__name {
+    margin: 0;
+    font-size: 16px;
+}
+
 .product-card__price {
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
+    white-space: nowrap;
 }
 
 .products__pagination {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 50px;
+}
+
+.pagination__number,
+.pagination__arrow {
+    color: #8b7969;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.pagination__number--current {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: #f5c800;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
 }
