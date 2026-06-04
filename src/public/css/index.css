@@ -60,12 +60,8 @@
     border-radius: 5px;
     font-size: 15px;
     font-weight: bold;
-    background: #F5c800;
+    background: #f5c800;
     cursor: pointer;
-}
-
-.search__select {
-    border-radius: 5px;
 }
 
 .search__sort {
@@ -78,6 +74,35 @@
     font-size: 20px;
     font-weight: bold;
     color: #333;
+}
+
+.search__select {
+    border-radius: 5px;
+}
+
+.sort-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 8px 12px;
+    border-radius: 30px;
+    border: 1px solid #f5c800;
+    color: #8b7969;
+    font-size: 14px;
+}
+
+.sort-tag__close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #f5c800;
+    border-radius: 50%;
+    font-size: 10px;
+    text-decoration: none;
+    color: #f5c800;
 }
 
 .products-list {

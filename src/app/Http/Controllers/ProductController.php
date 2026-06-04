@@ -27,4 +27,9 @@ class ProductController extends Controller
 
         return view('index', compact('products'));
     }
+    //仮
+    public function show($productId)
+    {
+        return view('show');
+    }
 }

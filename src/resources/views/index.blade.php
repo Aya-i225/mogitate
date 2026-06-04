@@ -24,6 +24,19 @@
                         <option value="high">高い順に表示</option>
                         <option value="low">低い順に表示</option>
                     </select>
+
+                    @if(request('sort') == 'high')
+                        <div class="sort-tag">
+                            高い順に表示
+                            <a class="sort-tag__close" href="/">×</a>
+                        </div>
+                    @endif
+                    @if(request('sort') == 'low')
+                        <div class="sort-tag">
+                            低い順に表示
+                            <a class="sort-tag__close" href="/">×</a>
+                        </div>
+                    @endif
                 </div>
             </form>
         </aside>
