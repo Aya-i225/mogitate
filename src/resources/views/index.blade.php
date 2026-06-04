@@ -43,13 +43,15 @@
 
         <div class="products-list">
             @foreach ($products as $product)
-            <div class="product-card">
-                <img class="product-card__img" src="{{ asset('storage/fruits-img/' .$product->image) }}" alt="{{ $product->name }}">
-                <div class="product-card__body">
-                    <p class="product-card__name">{{ $product->name }}</p>
-                    <p class="product-card__price">¥{{ number_format($product->price) }}</p>
+            <a class="product-card-link" href="/products/{{ $product->id }}">
+                <div class="product-card">
+                    <img class="product-card__img" src="{{ asset('storage/fruits-img/' .$product->image) }}" alt="{{ $product->name }}">
+                    <div class="product-card__body">
+                        <p class="product-card__name">{{ $product->name }}</p>
+                        <p class="product-card__price">¥{{ number_format($product->price) }}</p>
+                    </div>
                 </div>
-            </div>
+            </a>
             @endforeach
         </div>
     </div>
