@@ -8,12 +8,12 @@
 <div class="products">
     <div class="products__header">
         <h1 class="products__title">商品一覧</h1>
-        <a class="products__add-button" href="products/register">+商品を追加</a>
+        <a class="products__add-button" href="/products/register">+商品を追加</a>
     </div>
 
     <div class="products__content">
         <aside class="search">
-            <form action="/" method="GET" class="search__form">
+            <form action="/products" method="GET" class="search__form">
                 <input class="search__input" type="text" name="keyword" placeholder="商品名で検索">
                 <button class="search__button" type="submit">検索</button>
                 <div class="search__sort">
@@ -43,7 +43,7 @@
 
         <div class="products-list">
             @foreach ($products as $product)
-            <a class="product-card-link" href="/products/{{ $product->id }}">
+            <a class="product-card-link" href="/products/detail/{{ $product->id }}">
                 <div class="product-card">
                     <img class="product-card__img" src="{{ asset('storage/fruits-img/' .$product->image) }}" alt="{{ $product->name }}">
                     <div class="product-card__body">

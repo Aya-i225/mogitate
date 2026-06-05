@@ -14,6 +14,15 @@ use App\Http\Controllers\ProductController;
 |
 */
 
-Route::get('/', [ProductController::class, 'index']);
+Route::get('/', function () {
+    return redirect('/products');
+});
 
-Route::get('/products/{productId}', [ProductController::class, 'show']);
+Route::get('/products', [ProductController::class, 'index']);
+Route::get('/products/register', [ProductController::class, 'create']);
+Route::post('/products/register', [ProductController::class, 'store']);
+
+Route::get('/products/detail/{productId}', [ProductController::class, 'show']);
+
+Route::patch('/products/{productId}/update', [ProductController::class, 'update']);
+Route::delete('/products/{productId}/delete', [ProductController::class, 'destroy']);

@@ -8,18 +8,18 @@
     <link rel="stylesheet" href="{{ asset('css/common.css') }}" />
     @yield('css')
 </head>
-
+@yield('script')
 <body>
     <header class="header">
         <div class="header__inner">
-            <a href="/" class="header__logo">mogitate</a>
+            <a href="/products" class="header__logo">mogitate</a>
         </div>
     </header>
 
     <main>
         @yield('content')
     </main>
-
+@yield('script')
 </body>
 
 </html>
