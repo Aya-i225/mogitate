@@ -16,7 +16,7 @@
                 <label>商品名
                     <span class="required">必須</span>
                 </label>
-                <input type="text" name="name" value="{{ old('name') }}">
+                <input type="text" name="name" value="{{ old('name') }}" placeholder="商品名を入力">
                 @error('name')
                     <p class="error-message">{{ $message }}</p>
                 @enderror
@@ -25,7 +25,7 @@
                 <label>値段
                     <span class="required">必須</span>
                 </label>
-                <input type="text" name="price" value="{{ old('price') }}">
+                <input type="text" name="price" value="{{ old('price') }}" placeholder="値段を入力">
                 @error('price')
                     <p class="error-message">{{ $message }}</p>
                 @enderror
@@ -72,7 +72,7 @@
                 <label>商品説明
                     <span class="required">必須</span>
                 </label>
-                <textarea name="description" rows="8">{{ old('description') }}</textarea>
+                <textarea name="description" rows="8" placeholder="商品の説明を入力">{{ old('description') }}</textarea>
                 @error('description')
                     <p class="error-message">{{ $message }}</p>
                 @enderror

@@ -30,14 +30,14 @@
             <div class="product-detail__right">
                 <div class="form-group">
                     <label>商品名</label>
-                    <input type="text" name="name" value="{{ old('name', $product->name) }}">
+                    <input type="text" name="name" value="{{ old('name', $product->name) }}" placeholder="商品名を入力">
                     @error('name')
                         <p class="error-message">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="form-group">
                     <label>値段</label>
-                    <input type="text" name="price" value="{{ old('price', $product->price) }}">
+                    <input type="text" name="price" value="{{ old('price', $product->price) }}" placeholder="値段を入力">
                     @error('price')
                         <p class="error-message">{{ $message }}</p>
                     @enderror
@@ -66,7 +66,7 @@
         </div>
         <div class="product-description">
             <label>商品説明</label>
-            <textarea name="description" rows="8">{{ old('description', $product->description) }}</textarea>
+            <textarea name="description" rows="8" placeholder="商品の説明を入力">{{ old('description', $product->description) }}</textarea>
             @error('description')
                 <p class="error-message">{{ $message }}</p>
             @enderror

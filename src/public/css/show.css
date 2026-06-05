@@ -84,6 +84,10 @@
     border-radius: 5px;
 }
 
+.form-group input::placeholder {
+    color: #e0dfde;
+}
+
 .season-group {
     display: flex;
     gap: 40px;
@@ -134,6 +138,10 @@
     padding: 12px;
     border: 1px solid #e0dfde;
     border-radius: 5px;
+}
+
+.product-description textarea::placeholder {
+    color: #e0dfde;
 }
 
 .product-detail__buttons {
